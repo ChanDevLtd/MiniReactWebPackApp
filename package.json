@@ -4,11 +4,25 @@
   "description": "Demo to visualize climate data",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no tests installed\" && exit 1",
+    "build":     "webpack app/app.tsx --module-bind tsx=awesome-typescript-loader -o app/app.bundle.js --mode=production",
+    "build:dev": "webpack app/app.tsx --module-bind tsx=awesome-typescript-loader -o app/app.bundle.js --mode=development",
+    "watch":     "webpack app/app.tsx --module-bind tsx=awesome-typescript-loader -o app/app.bundle.js --mode=development --watch",
+    "start": "node server.js"
   },
   "author": "Chan",
   "license": "MIT",
   "devDependencies": {
-    "typescript": "^3.3.4000"
+    "@types/react": "^16.8.10",
+    "@types/react-dom": "^16.8.3",
+    "awesome-typescript-loader": "^5.2.1",
+    "typescript": "^3.3.4000",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "react": "^16.8.5",
+    "react-dom": "^16.8.5"
   }
 }
